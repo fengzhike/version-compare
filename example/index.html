@@ -8,9 +8,25 @@
     <script src="../dist/index.js"></script>
 </head>
 <body>
+   
+    <div>
+        <input type="text" id="version1" onchange="javascript:handlechange;">
+    </div>
+    <div>
+        <input type="text" id="version2" onchange="javascript:handlechange;">
+    </div>
+    <div id="compared"></div>
     <script>
-        document.write("compare('20.23.24.20190927_rc', '20.23.24.20190927_release')")   
-        document.write(compare('20.23.24.20190927_rc', '20.23.24.20190927_release'))   
+        function handlechange() {
+            if (version1.value && version2.value) {
+                document.querySelector('#compared').innerHTML = `${version1.value} vs ${version2.value} : ${compare(version1.value ,version2.value)}`;
+                // compared.innerHTML = `${version1.value} vs ${version1.value} : ${compare(version1.value ,version2.value)}`;
+            }
+        }
+        version1.onchange = handlechange
+        version2.onchange = handlechange
+        document.write( ' \n 20.23.24.20190927_rc \n', '  \n 20.23.24.20190927_release :\n')   
+        document.write('\n',compare( '20.23.24.20190927_rc', '20.23.24.20190927_release'), '\n')   
     </script>
 </body>
 </html>

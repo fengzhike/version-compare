@@ -6,6 +6,11 @@ const alphabetMap = {
     release: 5
 }
 function compare(v1, v2) {
+    // let re = /\d+\.\d+\.\d+/;
+    let re = /\d+\.\d+\.\d+(\.\d+_[a-z]+)?/;
+    if (!re.test(v1) || !re.test(v2)) {
+        throw new Error('请输入正确的版本号')
+    }
     let version1 = v1.match(/(\d+|[a-z]+)/g);
     let version2 = v2.match(/(\d+|[a-z]+)/g);
     let lv1 = version1.length;
