@@ -9,6 +9,7 @@ module.exports = {
         // 出口文件夹名
         path: path.resolve(__dirname, 'dist'),
         libraryExport: "default",
+        globalObject: "this",
         library: "compare",
         libraryTarget: "umd"
     },
