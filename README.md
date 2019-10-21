@@ -37,6 +37,20 @@
 1.0.0.20190926_release
 ```
 
+# 使用方法
+
+## 安装
+
+```
+$ npm i version-comparer
+
+```
+## 引用
+```javascript
+let compare = require('version-comparer');
+
+compare('1.0.0', '1.0.1'); // 2
+```
 
 
 
