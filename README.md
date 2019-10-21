@@ -1,4 +1,4 @@
-# version-compare
+# version-comparer
 版本号对比工具
 
 # 版本号规范
@@ -49,7 +49,7 @@ $ npm i version-comparer
 ```javascript
 let compare = require('version-comparer');
 
-compare('1.0.0', '1.0.1'); // 2
+compare('1.0.0', '1.0.1'); // 1
 ```
 
 

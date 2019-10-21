@@ -24,8 +24,6 @@ function compare(v1, v2) {
             item1 = alphabetMap[version1[i]] || 0;
             item2 = alphabetMap[version2[i]] || 0;
         }
-        console.log('item1', item1);
-        console.log('item2', item2);
         if (item2 > item1) {
             return 1;
         }
